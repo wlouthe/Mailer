@@ -12,9 +12,10 @@
 			//*
 			$subject = $_POST["subject"];
 			$message = $_POST["message"];
-			$headers = 'From: LogantheBogan Team <team@loganthebogan.com>\r\n';
+			
 			$headers .= "MIME-Version: 1.0\r\n";
 			$headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
+			$headers .= 'From: LogantheBogan Team <team@loganthebogan.com>';
 			//$list = array("");
 
 			foreach($list as $to)
