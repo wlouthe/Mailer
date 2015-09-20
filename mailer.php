@@ -19,8 +19,8 @@ if(isset($_POST["username"]) && !empty($_POST["username"]) && isset($_POST["pass
 <form id="mailinfo" action="submitmailer.php" method="post">
 <div>Subject:<input name="subject" type="text"></div>
 
-<div>Message:<br><textarea name="message"></textarea></div>
-<div>Recipients (Please separate entries by commas):<br><textarea name="recipients"></textarea></div>
+<div>Message:<br><textarea name="message" style="height:1000px; width:500px"></textarea></div>
+<div>Recipients (Please separate entries by commas):<br><textarea name="recipients" style="height:400px; width:500px"></textarea></div>
 
 <div><input type="submit"></div>
 </form>
