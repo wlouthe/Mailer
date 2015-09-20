@@ -1,14 +1,21 @@
 <html>
 	<body>
 		<?php
-			echo $_POST["subject"];
-			echo $_POST["message"];
-			echo $_POST["recipients"];
-			/*
-			$subject = '';
-			$message = "";
-			$headers = 'From: team@loganthebogan.com';
-			$list = array("");
+			//print_r($_POST);
+			echo "Subject:<br>".$_POST["subject"]."<br>";
+			echo "Message:<br>".$_POST["message"]."<br>";
+			//echo $_POST["recipients"];
+			$mylist = preg_replace('/\s+/', '', $_POST["recipients"]);
+			$list = explode(",",$mylist);
+			echo "<br>Recipients Expanded:<br>";
+			print_r($list);
+			//*
+			$subject = $_POST["subject"];
+			$message = $_POST["message"];
+			$headers = 'From: LogantheBogan Team <team@loganthebogan.com>\r\n';
+			$headers .= "MIME-Version: 1.0\r\n";
+			$headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
+			//$list = array("");
 
 			foreach($list as $to)
 			{
